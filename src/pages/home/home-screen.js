@@ -66,9 +66,7 @@ const HomeScreen = ({
   return (
     <View style={{backgroundColor: isEnabled ? 'white' : 'gray', flex: 1}}>
       <Text
-        style={{
-          marginHorizontal: widthPercentageToDP(3),
-          color: isEnabled ? 'black' : 'white',
+        style={{ color: isEnabled ? 'black' : 'white',
         }}>
         Developed By Utkarsh Singh
       </Text>
