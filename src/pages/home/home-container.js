@@ -130,6 +130,15 @@ const HomeContainer = () => {
       }
     }
   };
+  
+  const togglePlayPause = () => {
+    if (isPlaying) {
+      mediaRef.current?.pause();
+    } else {
+      mediaRef.current?.resume();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
   return (
     <HomeScreen
@@ -148,6 +157,7 @@ const HomeContainer = () => {
       mediaRef={mediaRef}
       isPlaying={isPlaying}
       setIsPlaying={setIsPlaying}
+      togglePlayPause={togglePlayPause}
     />
   );
 };

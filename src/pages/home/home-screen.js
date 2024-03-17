@@ -24,7 +24,6 @@ import Header from '../../atoms/header/header';
 import {heightPercentageToDP, widthPercentageToDP} from '../../../utils';
 import CustomInput from '../../atoms/textInput/customInput';
 import CustomButton from '../../atoms/button/customButton';
-import {Button} from 'react-native-share';
 
 const HomeScreen = ({
   shareGifWithDownload,
@@ -38,6 +37,7 @@ const HomeScreen = ({
   isPlaying,
   setIsPlaying,
   mediaRef,
+  togglePlayPause
 }) => {
   useEffect(() => {
     const handler = e => {
@@ -54,14 +54,6 @@ const HomeScreen = ({
     };
   }, []);
 
-  const togglePlayPause = () => {
-    if (isPlaying) {
-      mediaRef.current?.pause();
-    } else {
-      mediaRef.current?.resume();
-    }
-    setIsPlaying(!isPlaying);
-  };
 
   return (
     <View style={{backgroundColor: isEnabled ? 'white' : 'gray', flex: 1}}>
