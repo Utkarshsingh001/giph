@@ -65,9 +65,15 @@ const HomeScreen = ({
 
   return (
     <View style={{backgroundColor: isEnabled ? 'white' : 'gray', flex: 1}}>
-             <Text style={{marginHorizontal:widthPercentageToDP(3),color:isEnabled?'black':'white'}}>Developed By Utkarsh Singh</Text>
+      <Text
+        style={{
+          marginHorizontal: widthPercentageToDP(3),
+          color: isEnabled ? 'black' : 'white',
+        }}>
+        Developed By Utkarsh Singh
+      </Text>
       <View style={styles.headerContainer}>
- <Header isEnabled={isEnabled} title={'Giphy Beta App'} />
+        <Header isEnabled={isEnabled} title={'Giphy Beta App'} />
         <Switch
           trackColor={{false: '#767577', true: '#81b0ff'}}
           thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
